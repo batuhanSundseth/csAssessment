@@ -1,0 +1,8 @@
+       Extra Large | Large     | Medium   | Small   | Tiny
+insert 630.3112 ms   6.8148 ms   150.2 μs   44 μs     34.4 μs
+append 2.294 ms      387.2 μs    105.6 μs   77.9 μs   72.6 μs
+
+Each function scales with the size of the array passed to it. The larger the array, the slower the runtime.
+The append function scales better than the insert function because it has a faster runtime when it is given larger array sizes than the insert function. The runtime of the insert function increases at a faster rate than the append function as array sizes get larger, whihc makes it have worse scaling.
+
+The .push function simply appends a value to the end of an array, while .unshift must shift the index of every value in the array and add a new value at index 0.
